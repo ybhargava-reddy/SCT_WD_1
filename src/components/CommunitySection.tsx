@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Instagram, Youtube, MessageCircle, Twitter } from 'lucide-react';
+import { Instagram, Youtube, Twitter } from 'lucide-react';
+import discordLogo from '@/assets/discord-logo.png';
 
 const socialLinks = [
   {
@@ -21,7 +22,7 @@ const socialLinks = [
   },
   {
     name: 'Discord',
-    icon: MessageCircle,
+    icon: 'discord',
     followers: '45K',
     description: 'Real-time chat, team formation, and community events',
     url: '#',
@@ -58,7 +59,11 @@ const CommunitySection = () => {
                 <CardContent className="p-6 text-center">
                   <div className="flex justify-center mb-4">
                     <div className="p-4 bg-muted/50 rounded-full group-hover:bg-primary/20 transition-all">
-                      <IconComponent className={`w-8 h-8 ${social.color} group-hover:text-primary transition-colors`} />
+                      {social.name === 'Discord' ? (
+                        <img src={discordLogo} alt="Discord" className="w-8 h-8" />
+                      ) : (
+                        <IconComponent className={`w-8 h-8 ${social.color} group-hover:text-primary transition-colors`} />
+                      )}
                     </div>
                   </div>
                   
