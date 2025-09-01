@@ -1,1 +1,1 @@
-Task 1 completed for SkillCrafte Technology
+Task 1 completed for SkillCraft Technology
